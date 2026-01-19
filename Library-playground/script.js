@@ -39,3 +39,16 @@ window.addEventListener("scroll", () => {
     let scrollPosition = window.scrollY;
     scrollImg.style.top = scrollPosition * 0.5 + "px"; // moves slower than scroll
 });
+
+const adventureButtons = document.querySelectorAll(".adventure");
+const adventureFeedback = document.getElementById("adventure-feedback");
+
+adventureButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.dataset.choice === "left") {
+            adventureFeedback.textContent = "You found a treasure!";
+        } else {
+            adventureFeedback.textContent = "Oh no! You fell into a pit!";
+        }
+    });
+});
