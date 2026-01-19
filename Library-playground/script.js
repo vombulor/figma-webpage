@@ -33,3 +33,9 @@ answers.forEach(button => {
         }
     });
 });
+const scrollImg = document.getElementById("scroll-image");
+
+window.addEventListener("scroll", () => {
+    let scrollPosition = window.scrollY;
+    scrollImg.style.top = scrollPosition * 0.5 + "px"; // moves slower than scroll
+});
