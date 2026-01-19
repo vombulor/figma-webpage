@@ -21,3 +21,15 @@ document.getElementById("right").addEventListener("click", () => {
     leftPosition += 10;
     img.style.left = leftPosition + "px";
 });
+const answers = document.querySelectorAll("#interactive-trivia .answer");
+const feedback = document.getElementById("trivia-feedback");
+
+answers.forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.dataset.correct === "true") {
+            feedback.textContent = "Correct!";
+        } else {
+            feedback.textContent = "Try again!";
+        }
+    });
+});
