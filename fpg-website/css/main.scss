@@ -1,0 +1,57 @@
+// FPG Theme Colors
+$black: #0b0b0b;
+$gray: #1a1a1a;
+$accent: #ff4d00;
+$text: #eaeaea;
+
+// Body & Background
+body {
+  background-color: $black;
+  color: $text;
+  font-family: 'Arial', sans-serif;
+}
+
+// Links
+a {
+  color: $accent;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($accent, 10%);
+  }
+}
+
+// Header/Nav Overrides
+.navbar {
+  background-color: $gray;
+}
+
+// Buttons
+.btn-danger {
+  background-color: $accent;
+  border-color: $accent;
+
+  &:hover {
+    background-color: darken($accent, 10%);
+    border-color: darken($accent, 10%);
+  }
+}
+
+.btn-outline-light {
+  border-color: $accent;
+  color: $accent;
+
+  &:hover {
+    background-color: $accent;
+    color: $black;
+  }
+}
+
+// Footer
+footer {
+  background-color: $gray;
+  color: $text;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
