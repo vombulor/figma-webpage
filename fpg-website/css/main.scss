@@ -1,17 +1,30 @@
-// FPG Theme Colors
+// =====================
+// FPG THEME VARIABLES
+// =====================
 $black: #0b0b0b;
 $gray: #1a1a1a;
-$accent: #ff4d00;
-$text: #eaeaea;
 
-// Body & Background
+// Neon text color
+$neon: #d7ff00;
+
+// Accent color (buttons / highlights)
+$accent: #ff4d00;
+
+// Global text color
+$text: $neon;
+
+// =====================
+// GLOBAL STYLES
+// =====================
 body {
   background-color: $black;
   color: $text;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-// Links
+// =====================
+// LINKS
+// =====================
 a {
   color: $accent;
   text-decoration: none;
@@ -21,12 +34,40 @@ a {
   }
 }
 
-// Header/Nav Overrides
+// =====================
+// NAVBAR (BOOTSTRAP OVERRIDES)
+// =====================
 .navbar {
   background-color: $gray;
+  border-bottom: 2px solid $accent;
 }
 
-// Buttons
+.navbar,
+.navbar a,
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: $neon !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: lighten($neon, 10%) !important;
+}
+
+// =====================
+// HEADINGS
+// =====================
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $neon;
+  text-shadow: 0 0 6px rgba(215, 255, 0, 0.5);
+}
+
+// =====================
+// BUTTONS
+// =====================
 .btn-danger {
   background-color: $accent;
   border-color: $accent;
@@ -47,7 +88,57 @@ a {
   }
 }
 
-// Footer
+// =====================
+// HERO SECTION (HOME)
+// =====================
+.hero {
+  padding: 4rem 1rem;
+  text-align: center;
+
+  img {
+    max-width: 250px;
+    margin-bottom: 1rem;
+  }
+}
+
+// =====================
+// GALLERY GRID
+// =====================
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+
+  img {
+    width: 100%;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(215, 255, 0, 0.4);
+    }
+  }
+}
+
+// =====================
+// MUSIC CARDS
+// =====================
+.music-card {
+  background-color: $gray;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+// =====================
+// FOOTER
+// =====================
 footer {
   background-color: $gray;
   color: $text;

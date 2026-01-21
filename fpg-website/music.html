@@ -5,12 +5,16 @@
   <title>FPG | Music</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">FPG</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -28,18 +32,49 @@
     </div>
   </nav>
 
+  <!-- Music Section -->
   <main class="container my-5">
-    <h1 class="text-center mb-4">Music</h1>
-    <p>Check out our latest tracks below:</p>
-    <div class="text-center mt-4">
-      <iframe src="https://open.spotify.com/embed/album/your-album-id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <h1 class="text-center mb-5">Music</h1>
+
+    <div class="row g-4">
+      <!-- Fist Pounding Demo -->
+      <div class="col-md-4">
+        <div class="music-card">
+          <img src="images/ALBUM1.jpg" alt="Fist Pounding Demo Album Cover">
+          <h3>Fist Pounding Demo</h3>
+          <p>Raw blackened thrash with punk venom.</p>
+          <a href="https://fpgbro.bandcamp.com/album/fist-pounding-demo-2" target="_blank" class="btn btn-outline-light w-100 mt-2">Listen</a>
+        </div>
+      </div>
+
+      <!-- Spirit World -->
+      <div class="col-md-4">
+        <div class="music-card">
+          <img src="images/ALBUM 2.jpg" alt="Spirit World Album Cover">
+          <h3>Spirit World</h3>
+          <p>Gothic Doom-Punk meets Horror-Thrash.</p>
+          <a href="https://open.spotify.com/album/4pvZrpV5M9lhdN7HNREfgc?si=39D0otqwR0-Da3qhw4S4aQ" target="_blank" class="btn btn-outline-light w-100 mt-2">Listen</a>
+        </div>
+      </div>
+
+      <!-- Sonic Awakening -->
+      <div class="col-md-4">
+        <div class="music-card">
+          <img src="images/ALBUM3.jpg" alt="Sonic Awakening Album Cover">
+          <h3>Sonic Awakening</h3>
+          <p>Rock N Roll Acid Trip.</p>
+          <a href="https://open.spotify.com/album/5BA1EUhSoCHcg69L26iJz9?si=_2RkoXsCQo2DH6TtIZv0Pw" target="_blank" class="btn btn-outline-light w-100 mt-2">Listen</a>
+        </div>
+      </div>
     </div>
   </main>
 
-  <footer class="bg-dark text-light text-center py-3">
+  <!-- Footer -->
+  <footer class="bg-gray text-center py-3 mt-5">
     &copy; 2026 FPG
   </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
